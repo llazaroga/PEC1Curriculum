@@ -20,31 +20,35 @@ body {
 main{
   margin: 0;
   padding: 0;
-  padding-top: 40vh;
+  padding-top: 15vw;
+  display:block;
 }
 
-
+.header{
+  width:100%;
+  height: 20vw;
+}
 .container{
   width:100%;
-  height: 20vh;
+  height: 20vw;
   display: grid;
   grid-template-columns: 2.5fr 1fr;
 }
 
+
 .banner-pequeño {
-  display: flex;
   align-items: center;
 }
   .banner-pequeño img{
       width: 80vw;
   }
-  
+
 
 .navigation{
   display: flex;
-  align-items: center;
   float: right;
   justify-self: right;
+  padding-top: 3vw;
       ul {
         padding-right: 3vw;
         padding-left: 0;
@@ -52,16 +56,49 @@ main{
         text-align: left;
             li {
               display:block;
+              margin: 1rem 0;
                     a {
                       display: block;
-                      color: #000000;
+                      color: inherit;
                       text-align: center;
                       text-decoration: none;
-                      font-family: 'Pacifico', sans-serif;
-                      font-size: calc(0.5em + 1.5vw);
+                      font-family: 'Nunito', sans-serif;
+                      font-weight: bold;
+                      font-size: calc(0.5em + 1vw);
                     }
               }
       }
+}
+
+.naranja{
+  background-image: linear-gradient(to top left,#e0a63a,#e0a63a,#e0a63a,#e0a63a, white);
+  padding: 0.5rem 2rem;
+}
+.verde{
+  background-image: linear-gradient(to top left,#8ee79d,#8ee79d,#8ee79d,#8ee79d, white);
+  padding: 0.5rem 2rem;
+}
+.amarillo{
+  background-image: linear-gradient(to top left,#e9d462,#e9d462,#e9d462,#e9d462, white);
+  padding: 0.5rem 2rem;
+}
+.rosa{
+  background-image: linear-gradient(to top left,#c568b8,#c568b8,#c568b8,#c568b8, white);
+  padding: 0.5rem 2rem;
+}
+
+.naranja, .verde, .amarillo, .rosa {
+  transition: all .5s ease;
+  box-shadow: 20px 38px 34px -26px hsla(0, 0%, 0%, .2);
+  border: solid 4px #111110;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  border-bottom-right-radius: 225px 15px;
+  border-bottom-left-radius: 15px 255px;
+
+  &:hover {
+    box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, .3);
+  }
 }
 
 .caja_imagen{
@@ -69,56 +106,43 @@ main{
   display: block;
   text-align: center;
   padding: 12rem;
-  background-color:#ffffff;
-  
 
-          .texto_encima{
-            position: absolute;
-            top: 1rem;
-            left: 1rem;
-            right:1rem;
-            padding: 2rem;
-            text-align: left;
-            
+    .texto_encima{
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      right:1rem;
+      padding: 1rem 2rem;
+      text-align: left;
+      background-color: #fdfbf4;
+      transition:all .5s ease;
+      box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);
+      border:solid 2px #41403E;
+      border-top-left-radius: 255px 15px;
+      border-top-right-radius: 15px 225px;
+      border-bottom-right-radius: 225px 15px;
+      border-bottom-left-radius:15px 255px;
 
-                      .centrado{
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                      }
-          }
-}
+        &:hover {
+          box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, .3);
+        }
 
-.caja_imagen2{
-  position: relative;
-  display: block;
-  text-align: center;
-  padding: 12rem;
-  background-color:#ffffff;
-  
+        .centrado{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
 
-          .texto_encima{
-            position: absolute;
-            top: 1rem;
-            left: 1rem;
-            right:1rem;
-            padding: 2rem;
-            text-align: left;
-            
-
-                      .centrado{
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                      }
-          }
+        ul{
+          padding:0;
+        }
+    }
 }
 
 p{
     font-family: 'Nunito', sans-serif;
-    font-size: calc(1em + 0.4vw);
+    font-size: calc(0.6em + 0.5vw);
     text-align: justify;
   }
 
@@ -127,81 +151,66 @@ p{
     display: grid;
     grid-template-columns: 1fr 2.5fr;
     text-align: justify;
-                
-              img{
-                  width:100%;
-                  max-width: 70vw;
-                  }
-      }
-  
+
+    img{
+        width:100%;
+        max-width: 70vw;
+        }
+}
+
 .cuadricula{
-        padding: 10vw;
-        margin: 0;
-    }
+    padding: 0 10vw;
+    margin: 0;
+}
 
 .grid-item2{
-      padding: 0;
-      
+    padding: 0;
+}
+
+.grid-item3-left{
+  padding-left: 15%;
+  text-align: left;
+  align-self: center;
+
+    ul{
+      list-style-type: none;
+
+      li{
+        font-family: 'Nunito', sans-serif;
+        font-size: calc(0.6em + 0.5vw);
+
+      }
+    }
+ }
+
+ .grid_footer{
+  position: relative;
+  width: 100%;
+  height: 20vh;
+  background-color: #378870;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 1fr;
+
+    p{
+      padding-left: 5vh;
+      padding-right: 7vw;
+      text-align: left;
+    }
+    img{
+      width: 6vw;
+      padding: 1.5rem;
+    }
+ }
+
+.navigation_footer ul{
+    padding-right: 3vw;
+    padding-left: 0;
+    list-style-type: none;
+    text-align: left;
   }
 
-  .grid-item3-left{
-    padding-left: 15%;
-    text-align: left;
-    align-self: center;
+.navigation_footer ul li {
+    display:block;
 
-                ul{
-                  list-style-type: none;
-
-                  li{
-                    font-family: 'Nunito', sans-serif;
-                    font-size: calc(1em + 0.4vw);
-                    
-                  }
-                }
-   }
-
-   .grid_footer{
-    position: relative;
-    top: 30vh;
-    width: 100%;
-    height: 20vh;
-    background-color: #378870;
-    display: flex;
-    align-items: center;
-    display: grid;
-    grid-template-columns: 0.2fr 1fr 1fr;
-
-              p{
-                padding-left: 5vh;
-                padding-right: 7vw;
-                text-align: left;
-                
-                
-          }
-              img{
-                width: 6vw;
-                padding: 1.5rem;
-            }
-        }
-
-  .navigation_footer ul{
-            padding-right: 3vw;
-            padding-left: 0;
-            list-style-type: none;
-            text-align: left;   
-        }
-
-  .navigation_footer ul li {
-          display:block;
-    
-      }
-  
-      
-    
-
-
-
-
-
-
-
+}
