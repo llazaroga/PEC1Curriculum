@@ -4,11 +4,15 @@ $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
   "Segoe UI Symbol";
 $font-family-serif: "Georgia", "Times New Roman", serif;
+$fa-font-path: "../webfonts";
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;700&display=swap');
 
+/**
+ *He decidido utilizar la metodología BEM para estructurar el css
+ */
 
-
-body {
+/** Esto es el body*/
+.curriculum {
   background-image: url("../images/FondoCVweb.jpg");
   width: 100%;
   position: absolute;
@@ -16,78 +20,68 @@ body {
   padding: 0;
 }
 
-
-main{
-  margin: 0;
-  padding: 0;
-  padding-top: 15vw;
-  display:block;
+/** Aquí empieza el header*/
+.banner{
+  width:100%;
 }
 
-.header{
+.contenedor{
   width:100%;
-  height: 20vw;
-}
-.container{
-  width:100%;
-  height: 20vw;
   display: grid;
-  grid-template-columns: 2.5fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
-
-.banner-pequeño {
+/** Esto es el contenedor de la imagen*/
+.banner-pequeno {
   align-items: center;
 }
-  .banner-pequeño img{
-      width: 80vw;
+
+/** Esto es la imagen del banner*/
+  .banner-pequeno__lila{
+      width: 75vw;
+      max-width: 1050px;
   }
 
+/** Aquí empieza el navegador del header*/
 
-.navigation{
+.navegador{
   display: flex;
-  float: right;
-  justify-self: right;
+  justify-self: center;
   padding-top: 3vw;
-      ul {
-        padding-right: 3vw;
-        padding-left: 0;
-        list-style-type: none;
-        text-align: left;
-            li {
-              display:block;
-              margin: 1rem 0;
-                    a {
-                      display: block;
-                      color: inherit;
-                      text-align: center;
-                      text-decoration: none;
-                      font-family: 'Nunito', sans-serif;
-                      font-weight: bold;
-                      font-size: calc(0.5em + 1vw);
-                    }
-              }
-      }
+}
+.link{
+  display: block;
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  font-size: calc(0.3em + 1.2vw);
+  }
+
+.elementos{
+  margin: 0;
+  padding-right: 3vw;
+  padding-left: 0;
+  list-style-type: none;
 }
 
-.naranja{
+.elementos--naranja{
   background-image: linear-gradient(to top left,#e0a63a,#e0a63a,#e0a63a,#e0a63a, white);
-  padding: 0.5rem 2rem;
 }
-.verde{
+.elementos--verde{
   background-image: linear-gradient(to top left,#8ee79d,#8ee79d,#8ee79d,#8ee79d, white);
-  padding: 0.5rem 2rem;
-}
-.amarillo{
-  background-image: linear-gradient(to top left,#e9d462,#e9d462,#e9d462,#e9d462, white);
-  padding: 0.5rem 2rem;
-}
-.rosa{
-  background-image: linear-gradient(to top left,#c568b8,#c568b8,#c568b8,#c568b8, white);
-  padding: 0.5rem 2rem;
 }
 
-.naranja, .verde, .amarillo, .rosa {
+.elementos--amarillo{
+  background-image: linear-gradient(to top left,#e9d462,#e9d462,#e9d462,#e9d462, white);
+}
+
+.elementos--rosa{
+  background-image: linear-gradient(to top left,#c568b8,#c568b8,#c568b8,#c568b8, white);
+}
+
+.elementos--naranja, .elementos--verde, .elementos--amarillo, .elementos--rosa {
   transition: all .5s ease;
   box-shadow: 20px 38px 34px -26px hsla(0, 0%, 0%, .2);
   border: solid 4px #111110;
@@ -95,122 +89,228 @@ main{
   border-top-right-radius: 15px 225px;
   border-bottom-right-radius: 225px 15px;
   border-bottom-left-radius: 15px 255px;
+  margin: 1vw 0;
+  padding: 0.5vw 2vw;
+/** Con el símbolo & hacemos referencia al padre */
+  &:hover {
+    box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, .3);
+  }
+}
+/** Aquí acaba el header*/
+
+
+/** Aquí empieza el main*/
+.pizarra{
+  margin: 0;
+  padding: 0;
+  padding-top: 5vw;
+  min-height: 100vh;
+}
+
+/** Los cuatro próximos bloques contienen todos los elementos del main */
+.cuadricula{
+  padding: 0 10vw;
+  margin: 0;
+}
+
+.grid-contenedor{
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  grid-auto-rows: auto;
+  text-align: justify;
+}
+
+.grid-item-izquierda{
+  padding: 0;
+}
+
+.grid-item-derecha{
+  padding-left: 10vw;
+  text-align: left;
+  align-self: center;
+}
+
+/** Estos son los cuadras de la derecha */
+.texto-encima{
+  padding: 1rem 2rem;
+  text-align: left;
+  background-color: #fdfbf4;
+  transition:all .5s ease;
+  box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);
+  border:solid 2px #41403E;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  border-bottom-right-radius: 225px 15px;
+  border-bottom-left-radius:15px 255px;
+
+    &:hover {
+      box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, .3);
+    }
+  }
+
+.texto-encima--especial{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  padding: 1rem 2rem;
+  text-align: left;
+  background-color: #fdfbf4;
+  transition:all .5s ease;
+  box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);
+  border:solid 2px #41403E;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  border-bottom-right-radius: 225px 15px;
+  border-bottom-left-radius:15px 255px;
 
   &:hover {
     box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, .3);
   }
 }
 
-.caja_imagen{
-  position: relative;
-  display: block;
-  text-align: center;
-  padding: 12rem;
-
-    .texto_encima{
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
-      right:1rem;
-      padding: 1rem 2rem;
-      text-align: left;
-      background-color: #fdfbf4;
-      transition:all .5s ease;
-      box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);
-      border:solid 2px #41403E;
-      border-top-left-radius: 255px 15px;
-      border-top-right-radius: 15px 225px;
-      border-bottom-right-radius: 225px 15px;
-      border-bottom-left-radius:15px 255px;
-
-        &:hover {
-          box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, .3);
-        }
-
-        .centrado{
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-        }
-
-        ul{
-          padding:0;
-        }
-    }
+/** El texto */
+.parrafo{
+  font-family: 'Nunito', sans-serif;
+  font-size: calc(0.4em + 0.8vw);
+  text-align: justify;
 }
 
-p{
-    font-family: 'Nunito', sans-serif;
-    font-size: calc(0.6em + 0.5vw);
-    text-align: justify;
-  }
-
-
-.grid-container-left{
-    display: grid;
-    grid-template-columns: 1fr 2.5fr;
-    text-align: justify;
-
-    img{
-        width:100%;
-        max-width: 70vw;
-        }
+/** Estos son los post-its de la izquierda */
+.postit{
+  width:100%;
+  max-width: 70vw;
+  min-width: 235px;
+}
+    
+.lista{
+  list-style-type: none;
+  padding: 0;
 }
 
-.cuadricula{
-    padding: 0 10vw;
-    margin: 0;
+.lista--especial{
+  list-style-type: none;
+  padding: 0;
+  display: inline-block;
 }
 
-.grid-item2{
-    padding: 0;
+.lista__item{
+  font-family: 'Nunito', sans-serif;
+  font-size: calc(0.4em + 0.8vw);
 }
 
-.grid-item3-left{
-  padding-left: 15%;
-  text-align: left;
-  align-self: center;
+/** Aquí empieza el footer */
+.footer{
+  font-family: 'Nunito', sans-serif;
+  font-size: calc(0.4em + 0.8vw);
+  height: 15vh;
+}
 
-    ul{
-      list-style-type: none;
-
-      li{
-        font-family: 'Nunito', sans-serif;
-        font-size: calc(0.6em + 0.5vw);
-
-      }
-    }
- }
-
- .grid_footer{
-  position: relative;
+.grid-footer{
   width: 100%;
-  height: 20vh;
+  height: 15vh;
   background-color: #378870;
   align-items: center;
   display: grid;
-  grid-template-columns: 0.2fr 1fr 1fr;
+  grid-template-columns: 0.2fr 1fr 0.4fr;
+  margin:0;
+}
 
-    p{
-      padding-left: 5vh;
-      padding-right: 7vw;
-      text-align: left;
-    }
-    img{
-      width: 6vw;
-      padding: 1.5rem;
-    }
- }
+.grid-footer__logo{
+  width: 6vw;
+  padding: 1.5vw;
+}
 
-.navigation_footer ul{
-    padding-right: 3vw;
-    padding-left: 0;
-    list-style-type: none;
-    text-align: left;
+.grid-footer__parrafo{
+  padding-left: 5vw;
+  padding-right: 7vw;
+  text-align: left;
+  color: #242426;
+  font-weight: bold;
+}
+
+.lista-navegador{
+  padding-right: 3vw;
+  padding-left: 0;
+  list-style-type: none;
+  text-align: left;
+}
+
+.lista-navegador__item {
+  display:inline-block;
+  padding: 1vw;
+}
+
+/** Iconos de fontawesome */
+.instagram{
+  color:#242426;
+  text-decoration: none;
+  font-size: 30px;
+}
+.linkedin{
+  color:#242426;
+  text-decoration: none;
+  font-size: 30px;
+}
+.contact{
+  color:#242426;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+/** Media queries para pantallas de móvil */
+
+@media screen and (max-width: 800px){
+
+  .grid-contenedor{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-.navigation_footer ul li {
-    display:block;
+  .postit{
+    max-width: 250px;
+  }
+
+  .contenedor{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navegador{
+    padding: 0;
+  }
+
+  .elementos--naranja, .elementos--verde, .elementos--amarillo, .elementos--rosa {
+    display: inline-block;
+    border: solid 2px #111110;
+  }
+
+  .grid-item-derecha{
+    padding: 0;
+    padding-top: 3vw;
+    padding-bottom: 8vw;
+    align-items: center;
+  }
+
+  .parrafo{
+    font-size: calc(0.6em + 1vw);
+  }
+
+  .lista__item{
+    font-size: calc(0.6em + 1vw);
+  }
+
+  .footer{
+    font-size: calc(0.6em + 0.9vw);
+  }
+
+  .grid-footer__logo{
+    min-width: 50px;
+  }
 
 }

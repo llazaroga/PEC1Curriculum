@@ -6,235 +6,214 @@
   <meta name="viewport" content="width=device-width">
   <link rel="icon" href="assets/images/brand.png" type="image/png" />
   <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-  <!--<link rel="stylesheet" type="text/css" href="./assets/styles/styles.scss">-->
+  <link rel="stylesheet" type="text/css" href="./assets/scss/brands.scss">
+  <link rel="stylesheet" type="text/css" href="./assets/scss/solid.scss">
   <title>Lucía Lázaro</title>
 </head>
 
-<body>
+<body class="curriculum">
 
-  <header class="header">
+  <header class="banner">
 
-    <div class="container">
+    <div class="contenedor">
 
-      <div class="banner-pequeño">
-        <img src="assets/images/banner.webp" alt="Banner Lucía Lázaro">
+      <div class="banner-pequeno">
+        <img class="banner-pequeno__lila" src="assets/images/banner.webp" alt="Banner Lucía Lázaro">
       </div>
 
-        <nav class="navigation">
-            <ul>
-              <li class="naranja"><a href="">Sobre mí</a> </li>
-              <li class="verde"><a href="">Mi experiencia</a> </li>
-              <li class="amarillo"><a href="">Mis estudios</a></li>
-              <li class="rosa"><a href="">Mis habilidades</a></li>
-            </ul>
-        </nav>
+      <nav class="navegador">
+        <ul class="elementos">
+          <li class="elementos--naranja"><a class="link" href="#postitnaranja">Sobre mí</a> </li>
+          <li class="elementos--verde"><a class="link" href="#postitverde">Mi experiencia</a> </li>
+          <li class="elementos--amarillo"><a class="link" href="#postitamarillo">Mis estudios</a></li>
+          <li class="elementos--rosa"><a class="link" href="#postitrosa">Mis habilidades</a></li>
+        </ul>
+      </nav>
     </div>
-    <br/>
+    <br />
 
   </header>
 
-  <main>
+
+  <main class="pizarra">
+
     <div class="cuadricula">
 
 
 
-      <div class="grid-container-left">
+      <div class="grid-contenedor">
 
-        <div class="grid-item2">
+        <div class="grid-item-izquierda">
 
-          <img src="assets/images/postitnaranja.webp" alt="Post it sobre mí">
+          <img class="postit" src="assets/images/postitnaranja.webp" id="postitnaranja" alt="Post it sobre mí">
 
         </div>
 
-        <div class="grid-item3-left">
+        <div class="grid-item-derecha">
 
-          <div class="caja_imagen">
+          <div class="texto-encima">
 
-            <div class="texto_encima">
+            <p class="parrafo">
+              Soy Lucía Lázaro, estudiante universitaria del Máster de desarrollo de sitios y
+              aplicaciones web en la
+              UOC.
+              Licenciada en Bellas artes y técnica superior de actividades deportivas, el mundo del desarrollo web me
+              despertó la curiosidad y me embarqué en una nueva aventura que nada tenía que ver con lo que ya conocía.
+              Mi idea es aprender lo máximo posible, y poder entremezclar mis conocimientos artísticos y técnicos.
+              Me gustan los retos, pero también mantener el orden en mi zona de confort y trabajo.
+              Busco trabajar en un entorno creativo, con un buen equipo de trabajo y cumplir todos
+              los objetivos y metas que tengo por delante.
+            </p>
+          </div>
 
-              <p>Soy Lucía Lázaro, estudiante universitaria del Máster de desarrollo de sitios y aplicaciones web en la
-                UOC.
-                Licenciada en Bellas artes y técnica superior de actividades deportivas, el mundo del desarrollo web me
-                despertó la curiosidad y me embarqué en una nueva aventura que nada tenía que ver con lo que ya conocía.
-                Mi idea es aprender lo máximo posible, y poder entremezclar mis conocimientos artísticos y técnicos.
-                Me gustan los retos, pero también mantener el orden en mi zona de confort y trabajo.
-                Busco trabajar en un entorno creativo, con un buen equipo de trabajo y cumplir todos
-                los objetivos y metas que tengo por delante.
-              </p>
-            </div>
+        </div>
 
-            <div class="centrado"></div>
+        <div class="grid-item-izquierda">
+
+          <img class="postit" src="assets/images/postitverde.webp" id="postitverde" alt="Post it experiencia">
+
+        </div>
+
+        <div class="grid-item-derecha">
+
+          <div class="texto-encima">
+
+            <ul class="lista">
+
+              <li class="lista__item"><b>2019- Actualidad</b> Especialista en contenido y
+                copyright en <a href="https://www.latostadora.com/">laTostadora.com</a></li>
+              <li class="lista__item"><b>2017- 2019 </b>Monitora de natación y actividades dirigidas en FCC Aqualia</li>
+              <li class="lista__item"><b>2016-2017 </b>Teacher en <b><a
+                    href="https://www.kidsandus.es/es/">Kids&Us</a></b></li>
+              <li class="lista__item"><b>2013-2017 </b>Manager en Nubia Express</li>
+
+            </ul>
 
           </div>
 
         </div>
 
-        <div class="grid-item2">
 
 
-          <img src="assets/images/postitverde.webp" alt="Post it experiencia">
+        <div class="grid-item-izquierda">
+
+
+          <img class="postit" src="assets/images/postitamarillo.webp" id="postitamarillo" alt="Post it estudios">
 
         </div>
 
-        <div class="grid-item3-left">
+        <div class="grid-item-derecha">
 
-          <div class="caja_imagen">
+          <div class="texto-encima">
 
-            <div class="texto_encima">
+            <ul class="lista">
 
-              <ul>
+              <li class="lista__item"><b>2020 - Actualidad </b>Máster de desarrollo de sitios y aplicaciones web, UOC
+              </li>
+              <li class="lista__item"><b>2014-1016 </b>Grado superior de actividades físicas y deportivas</li>
+              <li class="lista__item"><b>2008-2014 </b>Licenciatura en Bellas Artes, Universitat de Barcelona</li>
 
-                <li><b>2019- Actualidad</b> Especialista en contenido y copyright en <a
-                    href="https://www.latostadora.com/">laTostadora.com</a></li>
-                <li><b>2017- 2019 </b>Monitora de natación y actividades dirigidas en FCC Aqualia</li>
-                <li><b>2016-2017 </b>Teacher en <a href="https://www.kidsandus.es/es/">Kids&Us</a></b></li>
-                <li><b>2013-2017 </b>Manager en Nubia Express</li>
-
-              </ul>
-
-            </div>
-
-            <div class="centrado"></div>
+            </ul>
 
           </div>
 
         </div>
 
-        <div class="grid-item2">
+
+        <div class="grid-item-izquierda">
 
 
-          <img src="assets/images/postitamarillo.webp" alt="Post it estudios">
-
+          <img class="postit" src="assets/images/postitrosa.webp" id="postitrosa" alt="Post it habilidades">
         </div>
 
-        <div class="grid-item3-left">
 
-          <div class="caja_imagen">
+        <div class="grid-item-derecha">
 
-            <div class="texto_encima">
+          <div class="caja-imagen">
 
-              <ul>
+            <div class="texto-encima--especial">
 
-                <li><b>2020 - Actualidad </b>Máster de desarrollo de sitios y aplicaciones web, UOC
-                </li>
-                <li><b>2014-1016 </b>Grado superior de actividades físicas y deportivas</li>
-                <li><b>2008-2014 </b>Licenciatura en Bellas Artes, Universitat de Barcelona</li>
+
+
+              <ul class="lista--especial">
+
+                <li class="lista__item"><b>Programas</b></li>
+                <li class="lista__item">Photoshop</li>
+                <li class="lista__item">Illustrator</li>
+                <li class="lista__item">Procreate</li>
+
+              </ul>
+
+              <ul class="lista--especial">
+
+                <li class="lista__item"><b>Idiomas</b></li>
+                <li class="lista__item">Inglés B2</li>
+                <li class="lista__item">Francés B1</li>
+                <li class="lista__item">Catalan C2</li>
+
+              </ul>
+              <ul class="lista--especial">
+
+                <li class="lista__item"><b>Aprendiendo...</b></li>
+                <li class="lista__item">HTML</li>
+                <li class="lista__item">CSS</li>
+                <li class="lista__item">Javascript</li>
 
               </ul>
 
             </div>
 
-            <div class="centrado"></div>
-
           </div>
-
         </div>
-
-        <div class="grid-item2">
-
-
-          <img src="assets/images/postitrosa.webp" alt="Post it habilidades">
-        </div>
-
-
-        <div class="grid-item3-left">
-
-          <div class="caja_imagen">
-
-            <div class="texto_encima">
-
-
-
-              <ul>
-
-                <li><b>Programas</b></li>
-                <li>Photoshop</li>
-                <li>Illustrator</li>
-                <li>Procreate</li>
-
-              </ul>
-
-              <ul>
-
-                <li><b>Idiomas</b></li>
-                <li>Inglés B2</li>
-                <li>Francés B1</li>
-                <li>Catalan nativo</li>
-                <li>Castellano nativo</li>
-
-              </ul>
-
-            </div>
-
-            <div class="centrado"></div>
-
-          </div>
-
-        </div>
-
       </div>
-
     </div>
 
-    <ul class="elementos_barra">
-
-      <li>
-
-        <a href="https://www.linkedin.com/in/luc%C3%ADa-l%C3%A1zaro-b7a675145/" class="linkedin">
-
-          <i class="fa-brands fa-linkedin"></i>
-
-        </a>
-
-      </li>
-
-      <li>
-
-        <a href="https://www.instagram.com/lu_moonlight/?hl=es" class="instagram">
-
-          <i class="fa-brands fa-instagram-square"></i>
-
-        </a>
-
-      </li>
-
-      <li>
-
-        <a href="#" class="twitter">
-
-          <i class="fa-brands fa-twitter-square"></i>
-
-        </a>
-
-      </li>
-
-    </ul>
-
+    <br />
   </main>
 
-  <footer>
+  <footer class="footer">
 
-    <div class="grid_footer">
+    <div class="grid-footer">
 
       <div>
-        <img src="assets/images/brand.png" alt="Logo lula">
+        <img class="grid-footer__logo" src="assets/images/brand.webp" alt="Logo lula">
       </div>
 
       <div>
 
-        <p>2021 © Lucía Lázaro Garrido</p>
+        <p class="grid-footer__parrafo">2021 © Lucía Lázaro Garrido</p>
 
       </div>
 
       <div>
 
-        <nav class="navigation_footer">
+        <nav class="grid-footer__navegador">
 
-          <ul>
+          <ul class="lista-navegador">
 
-            <li><a href="">Instagram</a> </li>
-            <li><a href="">Linkedin</a> </li>
-            <li><a href="">Correo</a></li>
+            <li class="lista-navegador__item">
+
+              <a href="https://www.instagram.com/lu_moonlight/?hl=es" class="instagram">
+
+                <i class="fab fa-instagram-square"></i>
+
+              </a>
+            </li>
+
+            <li class="lista-navegador__item">
+
+              <a href="https://www.linkedin.com/in/luc%C3%ADa-l%C3%A1zaro-b7a675145/" class="linkedin">
+
+                <i class="fab fa-linkedin"></i>
+
+              </a>
+
+            </li>
+            <li class="lista-navegador__item">
+              <a class="contact" href="#">
+                <i class="fas fa-envelope-square"></i>
+              </a>
+            </li>
 
           </ul>
 
