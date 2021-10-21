@@ -1,8 +1,5 @@
 @use "sass:color";
 
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
 $font-family: 'Nunito', sans-serif;
 $font-color: #242426;
 $fa-font-path: "../webfonts";
@@ -35,11 +32,12 @@ $fa-font-path: "../webfonts";
 /** Esto es el contenedor de la imagen*/
 .banner-pequeno {
   align-items: center;
+  
 
 /** Esto es la imagen del banner*/
       &__lila{
-          width: 75vw;
-          max-width: 1050px;
+        
+          max-width: 60vw;
       }
     }
 
@@ -132,7 +130,7 @@ $fa-font-path: "../webfonts";
   align-self: center;
 }
 
-/** Estos son los cuadras de la derecha */
+/** Estos son los cuadros enmarcados de la derecha */
 .texto-encima{
   padding: 1rem 2rem;
   text-align: left;
@@ -154,17 +152,9 @@ $fa-font-path: "../webfonts";
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       align-items: center;
-      padding: 1rem 2rem;
-      text-align: left;
-      background-color: #fdfbf4;
-      transition:all .5s ease;
-      box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);
-      border:solid 2px #41403E;
-      border-top-left-radius: 255px 15px;
-      border-top-right-radius: 15px 225px;
-      border-bottom-right-radius: 225px 15px;
-      border-bottom-left-radius:15px 255px;
-
+      @extend .texto-encima;
+      
+      
       &:hover {
         box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, .3);
       }
@@ -219,8 +209,10 @@ $fa-font-path: "../webfonts";
 
 
     &__logo{
-      width: 6vw;
+      
       padding: 1.5vw;
+      width:7vw;
+      
     }
 
     &__parrafo{
@@ -262,7 +254,18 @@ $fa-font-path: "../webfonts";
   font-size: 30px;
 }
 
+
 /** Media queries para pantallas de móvil */
+@media screen and (max-width: 1300px){
+
+  .elementos--naranja, .elementos--verde, .elementos--amarillo, .elementos--rosa {
+
+    border: solid 3px #111110;
+  }
+
+
+
+}
 
 @media screen and (max-width: 800px){
 
